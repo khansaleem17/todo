@@ -1,0 +1,144 @@
+.container
+{
+    width: 850px;
+    height: 70vh;
+    min-height: 450px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 11px 110px -36px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 110px -36px rgba(0,0,0,0.75);
+    box-shadow: 10px 11px 110px -36px rgba(0,0,0,0.75);
+    padding: 50px 100px;
+    box-sizing: border-box;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+.container h1{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 26px;
+}
+
+.add_task{
+    width: 400px;
+    margin-right: 15px;
+    height: 31px;
+    padding: 1px 10px;
+    font-size: 16px;
+    border: 1px solid #eeee;
+    font-family: Open Sans;
+}
+input:focus,select:focus{
+    outline:none;
+}
+
+::-webkit-input-placeholder {
+    font-family: Open Sans;
+    font-style: italic;
+  }
+
+  button{
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: #2c3e50;
+    color: #fff;
+  }
+
+  .submit
+  {
+      height: 30px;
+      border: 1px solid #2c3e50;
+      line-height: 30px;
+      margin-top: 3px;
+
+  }
+
+  ul{
+    margin-top: 15px;
+    height: 225px;
+    overflow-y: auto;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  ul li{
+    height: 40px;
+    list-style: none;
+    line-height: 40px;
+    border: 1px solid #eeee;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    
+   
+  }
+
+  select{
+    height: 34px;
+    padding: 1px 10px;
+    font-size: 16px;
+    width: 140px;
+    margin-right: 15px;
+    border: 1px solid #eeee;
+    font-family: Open Sans;
+  }
+
+.mr_15{
+    margin-right: 15px;
+}
+
+.btn_delete,.btn_edit{
+    display: none;
+    margin-top: 4px;
+}
+
+ul li:hover{
+border: 1px solid #ddd;
+}
+ul li:hover .btn_delete{
+    display: block;
+}
+
+
+ul li:hover .btn_edit{
+    display: block;
+}
+
+
+.title
+{
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.active{
+    text-decoration: line-through;
+    transition:  .3s;
+    color: #ccc;
+}
+
+.sortBypri
+{
+    clear: both;
+    margin: 10px 0;
+    margin-top:15px;
+    width: 200px; 
+}

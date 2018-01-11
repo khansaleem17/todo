@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h1>SIMPLE TODO</h1>
+  <form action="">
+    <input type="text" [(ngModel)] ="name" name="name" placeholder="What needs to be done?" class="add_task left">
+    <select [(ngModel)] ="pri" name="pri">
+      <option value="" hidden>Priority</option>
+      <option value="1">High </option>
+      <option value="0">Low</option>
+    </select>
+    <button (click)="createTodo()" class="submit right"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+    <select [(ngModel)] ="priority" name="priority" (change)="SortIt()" class="left sortBypri">
+        <option value="" hidden>Sort by priority</option>
+        <option value="1">High priority</option>
+        <option value="0">Low priority</option>
+        <option value="asc">ASC</option>
+          <option value="desc">DESC </option>
+      </select>
+   
+    <ul>
+     <li *ngFor="let todo of todos let i = index" >
+          <input type="checkbox"  id="{{i}}" class="left mr_15"  style="margin-top:15px;" (click)="toggleDone($event,i)">
+          <!-- <div class="left mr_15"><strong>{{todo.id}}</strong></div> -->
+          <div class="left mr_15 title" [class.active]="i == selectedRow"> {{todo.name}}</div> 
+          <div class="left mr_15" style="width:140px;color:#00BCD4">{{todo.date  | date :'shortDate'}}, {{todo.date  | date :'shortTime'}}</div> 
+          <div class="left mr_15">{{todo.pri}}</div>
+
+          <button (click)="deleteTodo(todo)" class="right btn_delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>     
+          <button (click)="updateTodo(todo)" class="right mr_15 btn_edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>  
+      </li>
+    </ul>
+  </form>
+</div>
+<div>
+
